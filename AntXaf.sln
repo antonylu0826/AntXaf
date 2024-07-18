@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntXaf.WebApi", "AntXaf.WebApi\AntXaf.WebApi.csproj", "{AB39AB25-CDFA-432F-AE5D-75E2280DAB6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntXafSite", "AntXaf.AntSite\AntXafSite.csproj", "{530AB10D-229F-4AFF-B17D-BC8A745A8D6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB39AB25-CDFA-432F-AE5D-75E2280DAB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB39AB25-CDFA-432F-AE5D-75E2280DAB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB39AB25-CDFA-432F-AE5D-75E2280DAB6B}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{AB39AB25-CDFA-432F-AE5D-75E2280DAB6B}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{AB39AB25-CDFA-432F-AE5D-75E2280DAB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB39AB25-CDFA-432F-AE5D-75E2280DAB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530AB10D-229F-4AFF-B17D-BC8A745A8D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530AB10D-229F-4AFF-B17D-BC8A745A8D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530AB10D-229F-4AFF-B17D-BC8A745A8D6E}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{530AB10D-229F-4AFF-B17D-BC8A745A8D6E}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{530AB10D-229F-4AFF-B17D-BC8A745A8D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530AB10D-229F-4AFF-B17D-BC8A745A8D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEDBAA78-ABCA-46D3-AC09-33D7278F7D29}
+	EndGlobalSection
+EndGlobal

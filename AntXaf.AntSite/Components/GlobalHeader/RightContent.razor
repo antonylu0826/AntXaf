@@ -1,0 +1,17 @@
+﻿@namespace AntXafSite.Components
+@inherits AntDomComponentBase
+
+<Space Class="@ClassMapper.Class" Size="@("24")">
+    <AuthorizeView Context="auth">
+        <Authorized>
+            <SpaceItem>
+                <AvatarDropdown Name="@currentUser.Name"
+                                Avatar="https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png"
+                                MenuItems="@AvatarMenuItems"
+                                OnItemSelected="HandleSelectUser" />
+            </SpaceItem>
+        </Authorized>
+    </AuthorizeView>
+</Space>
+
+
