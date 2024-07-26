@@ -3,9 +3,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace AntXafSite.Services
+namespace AntXafSiteTemplate.Authentications
 {
-    public static class JwtTokenHelper
+    internal static class JwtTokenHelper
     {
         public static string MakeToken(List<Claim> authClaims, IConfiguration configuration)
         {

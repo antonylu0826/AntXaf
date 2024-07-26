@@ -1,11 +1,11 @@
 ﻿using AntDesign;
-using AntXafSite.Services;
+using AntXafSiteTemplate.Authentications;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Primitives;
 using System.ComponentModel.DataAnnotations;
 
-namespace AntXafSite.Pages.Users
+namespace AntXafSiteTemplate.Pages.Users
 {
     public partial class Login
     {
@@ -14,7 +14,7 @@ namespace AntXafSite.Pages.Users
         private string returnUrl = string.Empty;
 
 
-        [Inject] public AppCoreService? CoreService { get; set; }
+        [Inject] internal XafAuthenticationService? AuthenticationService { get; set; }
         [Inject] public NavigationManager? Navigation { get; set; }
         [Inject] public MessageService? Message { get; set; }
 
@@ -33,9 +33,9 @@ namespace AntXafSite.Pages.Users
 
         public async void HandleSubmit()
         {
-            if (CoreService != null && Navigation != null && Message != null)
+            if (AuthenticationService != null && Navigation != null && Message != null)
             {
-                var loginResult = await CoreService.LoginAsync(model.Username, model.Password);
+                var loginResult = await AuthenticationService.LoginAsync(model.Username, model.Password);
                 if (loginResult)
                 {
                     if (!string.IsNullOrEmpty(returnUrl))

@@ -1,14 +1,14 @@
 ﻿using AntDesign;
 using AntDesign.ProLayout;
-using AntXafSite.Services;
+using AntXafSiteTemplate.Authentications;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 
-namespace AntXafSite.Components
+namespace AntXafSiteTemplate.Components
 {
     public partial class RightContent
     {
-        [Inject] protected AppCoreService? CoreService { get; set; }
+        [Inject] internal XafAuthenticationService? AuthenticationService { get; set; }
         [Inject] protected NavigationManager? NavigationManager { get; set; }
         [CascadingParameter] protected Task<AuthenticationState>? AuthStat { get; set; }
 
@@ -17,10 +17,10 @@ namespace AntXafSite.Components
         protected override async Task OnInitializedAsync()
         {
             base.OnInitialized();
-            if (CoreService != null)
+            if (AuthenticationService != null)
             {
                 SetClassMap();
-                currentUser = await CoreService.GetCurrentUserAsync();
+                currentUser = await AuthenticationService.GetCurrentUserAsync();
             }            
         }
 
@@ -38,7 +38,7 @@ namespace AntXafSite.Components
         };
         public async void HandleSelectUser(MenuItem item)
         {
-            if (NavigationManager != null && CoreService != null)
+            if (NavigationManager != null && AuthenticationService != null)
             {
                 switch (item.Key)
                 {
@@ -49,7 +49,7 @@ namespace AntXafSite.Components
                         NavigationManager.NavigateTo("/account/settings");
                         break;
                     case "logout":
-                        await CoreService.LogoutAsync();
+                        await AuthenticationService.LogoutAsync();
                         NavigationManager.NavigateTo("/user/login");
                         break;
                 }

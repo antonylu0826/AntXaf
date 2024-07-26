@@ -1,5 +1,5 @@
 using AntDesign.ProLayout;
-using AntXafSite.Services;
+using AntXafSiteTemplate.Authentications;
 using Blazored.SessionStorage;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -21,9 +21,9 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 //DI Service
 builder.Services.AddBlazoredSessionStorage();
 
-builder.Services.AddTransient<AppCoreService>();
-builder.Services.AddScoped<AuthenticationStateProvider, CustomBlazorAuthStateProvider>();
-builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<XafAuthenticationService>();
+builder.Services.AddScoped<AuthenticationStateProvider, XafAuthStateProvider>();
+builder.Services.AddTransient<IXafUserService, XafUserService>();
 
 var app = builder.Build();
 

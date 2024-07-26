@@ -5,18 +5,18 @@ using System.Text;
 using System.Text.Json;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace AntXafSite.Services
+namespace AntXafSiteTemplate.Authentications
 {
-    public interface IUserService
+    internal interface IXafUserService
     {
         Task<string> LoginAsync(string login, string password);
     }
 
-    public class UserService : IUserService
+    internal class XafUserService : IXafUserService
     {
         private readonly IConfiguration configuration;
 
-        public UserService(IConfiguration configuration)
+        public XafUserService(IConfiguration configuration)
         {
             this.configuration = configuration;
         }

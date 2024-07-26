@@ -4,18 +4,18 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 
-namespace AntXafSite.Services
+namespace AntXafSiteTemplate.Authentications
 {
-    public class AppCoreService
+    internal class XafAuthenticationService
     {
         private readonly string TokenKey = nameof(TokenKey);
 
         private readonly ProtectedLocalStorage localStorage;
         private readonly NavigationManager navigation;
-        private readonly IUserService usersService;
+        private readonly IXafUserService usersService;
         private readonly IConfiguration configuration;
 
-        public AppCoreService(ProtectedLocalStorage localStorage, NavigationManager navigation, IUserService usersService, IConfiguration configuration)
+        public XafAuthenticationService(ProtectedLocalStorage localStorage, NavigationManager navigation, IXafUserService usersService, IConfiguration configuration)
         {
             this.localStorage = localStorage;
             this.navigation = navigation;

@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace AntXafSite.Services
+namespace AntXafSiteTemplate.Authentications
 {
-    public class ODataEnity<T>
+    internal class ODataEnity<T>
     {
         [JsonPropertyName("@odata.context")]
         public string? OdataContext { get; set; }

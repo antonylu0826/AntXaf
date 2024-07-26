@@ -7,7 +7,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "AntXafSite": {
+    "AntXafSiteTemplate": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

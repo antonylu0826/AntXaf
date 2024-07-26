@@ -1,20 +1,20 @@
 ﻿using Microsoft.AspNetCore.Components.Authorization;
 using System.Security.Claims;
 
-namespace AntXafSite.Services
+namespace AntXafSiteTemplate.Authentications
 {
-    public class CustomBlazorAuthStateProvider : AuthenticationStateProvider
+    internal class XafAuthStateProvider : AuthenticationStateProvider
     {
-        private readonly AppCoreService coreService;
+        private readonly XafAuthenticationService AuthenticationService;
 
-        public CustomBlazorAuthStateProvider(AppCoreService coreService)
+        public XafAuthStateProvider(XafAuthenticationService AuthenticationService)
         {
-            this.coreService = coreService;
+            this.AuthenticationService = AuthenticationService;
         }
 
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            var claims = await coreService.GetLoginInfoAsync();
+            var claims = await AuthenticationService.GetLoginInfoAsync();
             ClaimsIdentity claimsIdentity;
             if (claims.Any())
             {

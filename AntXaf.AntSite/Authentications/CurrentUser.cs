@@ -1,6 +1,6 @@
-﻿namespace AntXafSite.Services
+﻿namespace AntXafSiteTemplate.Authentications
 {
-    public class CurrentUser
+    internal class CurrentUser
     {
         public Guid Oid { get; set; }
         public string? Userid { get; set; }
